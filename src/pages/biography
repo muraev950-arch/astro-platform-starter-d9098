@@ -1,100 +1,60 @@
 ---
-export const prerender = true;
+import Layout from "../layouts/Layout.astro";
 ---
 
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Александр Литвин — Биография</title>
+<Layout title="Биография — Александр Литвин">
+  <section class="bio">
+    <img
+      src="/images/alexandr-litvin.jpg"
+      alt="Александр Литвин"
+      class="bio-photo"
+    />
 
-  <style>
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      background: #020617;
-      color: #ffffff;
-      line-height: 1.7;
-    }
+    <h1>Александр Литвин</h1>
 
-    header {
-      padding: 70px 20px;
-      text-align: center;
-    }
+    <p>
+      Александр Литвин — экстрасенс, парапсихолог, аналитик, победитель одного из
+      самых известных телевизионных проектов «Битва экстрасенсов».
+    </p>
 
-    h1 {
-      font-size: 38px;
-      margin-bottom: 10px;
-    }
+    <p>
+      Его подход основан не на мистике в классическом понимании, а на глубокой
+      аналитической работе, умении видеть причинно-следственные связи и
+      стратегически просчитывать развитие событий.
+    </p>
 
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
+    <p>
+      Сегодня Александр Литвин работает в формате <strong>Private Office</strong>
+      — закрытого индивидуального сопровождения для людей, принимающих сложные
+      жизненные и управленческие решения.
+    </p>
 
-    img {
-      width: 100%;
-      max-width: 420px;
-      border-radius: 16px;
-      display: block;
-      margin: 0 auto 40px;
-    }
+    <a href="/" class="btn-back">← Вернуться на главную</a>
+  </section>
+</Layout>
 
-    p {
-      font-size: 18px;
-      color: #cbd5f5;
-      margin-bottom: 20px;
-    }
-
-    a {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 14px 28px;
-      background: #6366f1;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: 600;
-    }
-  </style>
-</head>
-
-<body>
-
-<header>
-  <h1>Александр Литвин</h1>
-  <p>Полная биография</p>
-</header>
-
-<div class="container">
-  <img src="/litvin.jpg" alt="Александр Литвин" />
-
-  <p>
-    Александр Литвин — экстрасенс и парапсихолог, получивший широкую известность
-    после победы в телевизионном проекте «Битва экстрасенсов».
-  </p>
-
-  <p>
-    Его профессиональная деятельность сосредоточена на глубоком анализе
-    жизненных ситуаций, вероятностных сценариев и стратегических решений.
-  </p>
-
-  <p>
-    Александр работает в формате <strong>Private Office</strong> —
-    закрытой индивидуальной практики, предполагающей конфиденциальность
-    и персональный подход.
-  </p>
-
-  <p>
-    Клиентами становятся предприниматели, руководители и частные лица,
-    для которых важно понимание причин происходящих событий и возможных
-    направлений развития будущего.
-  </p>
-
-  <a href="/">Вернуться на главную</a>
-</div>
-
-</body>
-</html>
+<style>
+.bio {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  text-align: center;
+}
+.bio-photo {
+  width: 260px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+.bio p {
+  margin-bottom: 20px;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+.btn-back {
+  display: inline-block;
+  margin-top: 40px;
+  text-decoration: none;
+  color: #6366f1;
+  font-weight: 600;
+}
+</style>
