@@ -1,0 +1,106 @@
+---
+export const prerender = true;
+---
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Александр Литвин — Биография</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: #020617;
+      color: #ffffff;
+      line-height: 1.7;
+    }
+
+    header {
+      padding: 70px 20px;
+      text-align: center;
+      background: #020617;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    img {
+      width: 100%;
+      max-width: 420px;
+      border-radius: 16px;
+      display: block;
+      margin: 0 auto 40px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #cbd5f5;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 28px;
+      background: #6366f1;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Александр Литвин</h1>
+  <p>Биография и профессиональный путь</p>
+</header>
+
+<div class="container">
+
+  <!-- ВСТАВЬ ССЫЛКУ НА ФОТО НИЖЕ -->
+  <img src="https://via.placeholder.com/420x520" alt="Александр Литвин" />
+
+  <p>
+    Александр Литвин — экстрасенс и парапсихолог, получивший широкую известность
+    после победы в телевизионном проекте «Битва экстрасенсов». Однако его
+    профессиональная деятельность выходит далеко за рамки публичных форматов.
+  </p>
+
+  <p>
+    На протяжении многих лет Александр занимается индивидуальной аналитической
+    работой с людьми, находящимися в точках принятия ключевых жизненных решений.
+    Его подход основан на анализе вероятностей, причинно-следственных связей
+    и долгосрочных последствий выбора.
+  </p>
+
+  <p>
+    В отличие от массовых консультаций, Александр работает в формате
+    <strong>Private Office</strong> — закрытой индивидуальной практики,
+    предполагающей полную конфиденциальность и глубину погружения в запрос.
+  </p>
+
+  <p>
+    Клиентами становятся предприниматели, руководители, публичные личности
+    и частные лица, для которых важно не предсказание, а понимание возможных
+    сценариев развития событий.
+  </p>
+
+  <a href="/" class="button">Вернуться на главную</a>
+</div>
+
+</body>
+</html>
