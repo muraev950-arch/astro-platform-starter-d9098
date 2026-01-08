@@ -14,18 +14,27 @@ export const prerender = true;
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      background: #0f172a;
+      background: #020617;
       color: #ffffff;
     }
 
     header {
-      padding: 90px 20px;
+      padding: 80px 20px;
       text-align: center;
       background: radial-gradient(circle at top, #1e293b, #020617);
     }
 
+    img {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 30px;
+      border: 3px solid #6366f1;
+    }
+
     h1 {
-      font-size: 44px;
+      font-size: 42px;
       margin-bottom: 20px;
     }
 
@@ -37,9 +46,13 @@ export const prerender = true;
       line-height: 1.6;
     }
 
+    .buttons {
+      margin-top: 30px;
+    }
+
     .button {
       display: inline-block;
-      margin: 15px;
+      margin: 10px;
       padding: 16px 32px;
       background: #6366f1;
       color: #fff;
@@ -49,7 +62,7 @@ export const prerender = true;
       font-weight: 600;
     }
 
-    .button.secondary {
+    .secondary {
       background: #334155;
     }
 
@@ -58,12 +71,9 @@ export const prerender = true;
       background: #020617;
     }
 
-    .form-container {
-      max-width: 500px;
-      margin: 0 auto;
-    }
-
     form {
+      max-width: 480px;
+      margin: 0 auto;
       display: flex;
       flex-direction: column;
       gap: 15px;
@@ -92,7 +102,6 @@ export const prerender = true;
       padding: 30px;
       font-size: 14px;
       color: #94a3b8;
-      background: #020617;
     }
   </style>
 </head>
@@ -100,28 +109,32 @@ export const prerender = true;
 <body>
 
 <header>
+  <!-- ФОТО -->
+  <img src="/litvin.jpg" alt="Александр Литвин" />
+
   <h1>Александр Литвин</h1>
+
   <p>
-    Экстрасенс и парапсихолог, победитель проекта «Битва экстрасенсов».  
-    Private Office — закрытый формат индивидуальной работы.
+    Экстрасенс и парапсихолог, победитель проекта «Битва экстрасенсов».
+    Закрытый формат индивидуальной аналитической работы — Private Office.
   </p>
 
-  <a href="/biography" class="button secondary">Биография</a>
-  <a href="#form" class="button">Оставить заявку</a>
+  <div class="buttons">
+    <a href="/biography" class="button secondary">Биография</a>
+    <a href="#form" class="button">Оставить заявку</a>
+  </div>
 </header>
 
 <section id="form">
-  <div class="form-container">
-    <h2 style="text-align:center;">Оставить заявку</h2>
+  <h2 style="text-align:center;">Оставить заявку</h2>
 
-    <form name="consultation" method="POST" data-netlify="true">
-      <input type="hidden" name="form-name" value="consultation" />
-      <input type="text" name="name" placeholder="Ваше имя" required />
-      <input type="email" name="email" placeholder="Email" required />
-      <textarea name="message" placeholder="Опишите ваш запрос" required></textarea>
-      <button type="submit">Отправить</button>
-    </form>
-  </div>
+  <form name="consultation" method="POST" data-netlify="true">
+    <input type="hidden" name="form-name" value="consultation" />
+    <input type="text" name="name" placeholder="Ваше имя" required />
+    <input type="email" name="email" placeholder="Email" required />
+    <textarea name="message" placeholder="Опишите ваш запрос" required></textarea>
+    <button type="submit">Отправить</button>
+  </form>
 </section>
 
 <footer>
