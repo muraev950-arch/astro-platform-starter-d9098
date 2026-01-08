@@ -1,47 +1,4 @@
 ---
-import Layout from '../layouts/Layout.astro';
----
-
-<Layout title="Александр Литвин — Private Office">
-  <main class="container mx-auto px-6 py-24 text-center">
-
-    <div class="mb-6 text-sm uppercase tracking-widest text-gray-500">
-      Private Office
-    </div>
-
-    <h1 class="text-5xl md:text-6xl font-semibold mb-8">
-      Александр Литвин
-    </h1>
-
-    <p class="text-xl md:text-2xl max-w-3xl mx-auto text-gray-600 leading-relaxed">
-      Александр Литвин — экстрасенс и парапсихолог, победитель проекта
-      «Битва экстрасенсов».  
-      Private Office — закрытый формат индивидуальной работы
-      с жизненными и стратегическими решениями.
-    </p>
-
-    <section class="mt-20 max-w-4xl mx-auto text-left text-lg text-gray-700 leading-relaxed">
-      <p class="mb-6">
-        Private Office Александра Литвина создан для ситуаций, в которых
-        стандартные консультации и внешние советы не дают необходимой ясности.
-      </p>
-
-      <p class="mb-6">
-        Работа строится на анализе вероятностных сценариев будущего,
-        оценке рисков и понимании последствий ключевых решений.
-        Формат предполагает полную конфиденциальность
-        и индивидуальный подход к каждому запросу.
-      </p>
-
-      <p>
-        Доступ к Private Office предоставляется ограниченному кругу лиц
-        по предварительному запросу.
-      </p>
-    </section>
-
-  </main>
-</Layout>
----
 export const prerender = true;
 ---
 
@@ -49,152 +6,141 @@ export const prerender = true;
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <title>Александр Литвин — Private Office</title>
-    <meta
-      name="description"
-      content="Александр Литвин — экстрасенс и парапсихолог. Индивидуальная работа. Private Office."
-    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Александр Литвин — Private Office</title>
+    <meta name="description" content="Александр Литвин — экстрасенс и парапсихолог. Индивидуальная работа. Private Office." />
 
     <style>
       body {
         margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial,
-          sans-serif;
-        background: #0f0f0f;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+        background: #0f172a;
         color: #ffffff;
+        line-height: 1.6;
       }
 
-      .container {
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 24px;
-      }
-
-      .card {
-        max-width: 520px;
-        width: 100%;
-        background: #161616;
-        padding: 32px;
-        border-radius: 16px;
-        box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+      header {
+        padding: 80px 20px;
+        text-align: center;
+        background: radial-gradient(circle at top, #1e293b, #020617);
       }
 
       h1 {
-        margin-top: 0;
-        margin-bottom: 16px;
-        font-size: 28px;
-        text-align: center;
+        font-size: 42px;
+        margin-bottom: 20px;
       }
 
       p {
-        line-height: 1.6;
-        text-align: center;
-        margin-bottom: 24px;
-        color: #d0d0d0;
+        max-width: 720px;
+        margin: 0 auto 20px;
+        font-size: 18px;
+        color: #cbd5f5;
+      }
+
+      .button {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 16px 32px;
+        background: #6366f1;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 8px;
+        font-size: 18px;
+        font-weight: 600;
+        transition: background 0.2s ease;
+      }
+
+      .button:hover {
+        background: #4f46e5;
+      }
+
+      section {
+        padding: 80px 20px;
+        background: #020617;
+      }
+
+      .form-container {
+        max-width: 500px;
+        margin: 0 auto;
+        background: #020617;
       }
 
       form {
         display: flex;
         flex-direction: column;
-        gap: 12px;
+        gap: 15px;
       }
 
       input,
       textarea {
-        padding: 12px;
-        border-radius: 8px;
+        padding: 14px;
+        border-radius: 6px;
         border: none;
         font-size: 16px;
       }
 
       textarea {
         resize: vertical;
-        min-height: 100px;
+        min-height: 120px;
       }
 
       button {
-        margin-top: 8px;
         padding: 14px;
-        font-size: 16px;
-        border-radius: 10px;
+        background: #22c55e;
         border: none;
-        background: #ffffff;
-        color: #000000;
-        cursor: pointer;
+        border-radius: 6px;
+        color: #022c22;
+        font-size: 16px;
         font-weight: 600;
+        cursor: pointer;
       }
 
       button:hover {
-        opacity: 0.9;
+        background: #16a34a;
       }
 
-      .note {
-        font-size: 12px;
+      footer {
         text-align: center;
-        color: #888;
-        margin-top: 12px;
+        padding: 30px;
+        font-size: 14px;
+        color: #94a3b8;
+        background: #020617;
       }
     </style>
   </head>
 
   <body>
-    <div class="container">
-      <div class="card">
-        <h1>Александр Литвин</h1>
+    <header>
+      <h1>Александр Литвин</h1>
+      <p>
+        Экстрасенс и парапсихолог, победитель проекта «Битва экстрасенсов».
+        <br />
+        Private Office — закрытый формат индивидуальной работы
+        с жизненными и стратегическими решениями.
+      </p>
 
-        <p>
-          Экстрасенс и парапсихолог, победитель проекта «Битва экстрасенсов».
-          <br />
-          Индивидуальная закрытая работа — Private Office.
-        </p>
+      <a href="#form" class="button">Оставить заявку</a>
+    </header>
+
+    <section id="form">
+      <div class="form-container">
+        <h2 style="text-align:center; margin-bottom:20px;">Оставить заявку</h2>
 
         <!-- Netlify Form -->
-        <form
-          name="request"
-          method="POST"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
-        >
-          <!-- обязательное скрытое поле -->
-          <input type="hidden" name="form-name" value="request" />
+        <form name="consultation" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="consultation" />
 
-          <!-- защита от ботов -->
-          <p style="display:none;">
-            <label>
-              Don’t fill this out: <input name="bot-field" />
-            </label>
-          </p>
+          <input type="text" name="name" placeholder="Ваше имя" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <textarea name="message" placeholder="Кратко опишите ваш вопрос" required></textarea>
 
-          <input
-            type="text"
-            name="name"
-            placeholder="Ваше имя"
-            required
-          />
-
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            required
-          />
-
-          <textarea
-            name="message"
-            placeholder="Кратко опишите ваш запрос"
-            required
-          ></textarea>
-
-          <button type="submit">Оставить заявку</button>
+          <button type="submit">Отправить</button>
         </form>
-
-        <div class="note">
-          Все обращения рассматриваются индивидуально
-        </div>
       </div>
-    </div>
+    </section>
+
+    <footer>
+      © Александр Литвин · Private Office
+    </footer>
   </body>
 </html>
