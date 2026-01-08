@@ -1,145 +1,103 @@
 ---
-export const prerender = true;
+import Layout from "../layouts/Layout.astro";
 ---
 
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Александр Литвин — Private Office</title>
-  <meta name="description" content="Александр Литвин — экстрасенс и парапсихолог. Закрытый формат индивидуальной работы." />
+<Layout title="Александр Литвин — Private Office">
+  <section class="hero">
+    <img
+      src="/images/alexandr-litvin.jpg"
+      alt="Александр Литвин"
+      class="hero-photo"
+    />
 
-  <style>
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      background: #020617;
-      color: #ffffff;
-    }
+    <h1>Александр Литвин</h1>
+    <p class="subtitle">
+      Экстрасенс и парапсихолог, победитель проекта «Битва экстрасенсов».
+      Закрытый формат индивидуальной аналитической работы — Private Office.
+    </p>
 
-    header {
-      padding: 80px 20px;
-      text-align: center;
-      background: radial-gradient(circle at top, #1e293b, #020617);
-    }
+    <div class="actions">
+      <a href="/biography" class="btn secondary">Биография</a>
+      <a href="#form" class="btn primary">Оставить заявку</a>
+    </div>
+  </section>
 
-    img {
-      width: 220px;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin-bottom: 30px;
-      border: 3px solid #6366f1;
-    }
+  <section id="form" class="form-section">
+    <h2>Оставить заявку</h2>
 
-    h1 {
-      font-size: 42px;
-      margin-bottom: 20px;
-    }
+    <form
+      name="request"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+    >
+      <input type="hidden" name="form-name" value="request" />
 
-    p {
-      max-width: 760px;
-      margin: 0 auto 20px;
-      font-size: 18px;
-      color: #cbd5f5;
-      line-height: 1.6;
-    }
+      <input type="text" name="name" placeholder="Ваше имя" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="tel" name="phone" placeholder="Телефон" required />
 
-    .buttons {
-      margin-top: 30px;
-    }
+      <button type="submit">Отправить</button>
+    </form>
+  </section>
+</Layout>
 
-    .button {
-      display: inline-block;
-      margin: 10px;
-      padding: 16px 32px;
-      background: #6366f1;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 8px;
-      font-size: 18px;
-      font-weight: 600;
-    }
-
-    .secondary {
-      background: #334155;
-    }
-
-    section {
-      padding: 80px 20px;
-      background: #020617;
-    }
-
-    form {
-      max-width: 480px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    input, textarea {
-      padding: 14px;
-      border-radius: 6px;
-      border: none;
-      font-size: 16px;
-    }
-
-    button {
-      padding: 14px;
-      background: #22c55e;
-      border: none;
-      border-radius: 6px;
-      color: #022c22;
-      font-size: 16px;
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      font-size: 14px;
-      color: #94a3b8;
-    }
-  </style>
-</head>
-
-<body>
-
-<header>
-  <!-- ФОТО -->
-  <img src="/litvin.jpg" alt="Александр Литвин" />
-
-  <h1>Александр Литвин</h1>
-
-  <p>
-    Экстрасенс и парапсихолог, победитель проекта «Битва экстрасенсов».
-    Закрытый формат индивидуальной аналитической работы — Private Office.
-  </p>
-
-  <div class="buttons">
-    <a href="/biography" class="button secondary">Биография</a>
-    <a href="#form" class="button">Оставить заявку</a>
-  </div>
-</header>
-
-<section id="form">
-  <h2 style="text-align:center;">Оставить заявку</h2>
-
-  <form name="consultation" method="POST" data-netlify="true">
-    <input type="hidden" name="form-name" value="consultation" />
-    <input type="text" name="name" placeholder="Ваше имя" required />
-    <input type="email" name="email" placeholder="Email" required />
-    <textarea name="message" placeholder="Опишите ваш запрос" required></textarea>
-    <button type="submit">Отправить</button>
-  </form>
-</section>
-
-<footer>
-  © Александр Литвин · Private Office
-</footer>
-
-</body>
-</html>
+<style>
+.hero {
+  min-height: 90vh;
+  text-align: center;
+  padding: 80px 20px;
+}
+.hero-photo {
+  width: 220px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+.subtitle {
+  max-width: 700px;
+  margin: 20px auto 40px;
+  opacity: 0.9;
+}
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.btn {
+  padding: 14px 28px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.primary {
+  background: #6366f1;
+  color: #fff;
+}
+.secondary {
+  background: #1f2937;
+  color: #fff;
+}
+.form-section {
+  padding: 80px 20px;
+  text-align: center;
+}
+form {
+  max-width: 420px;
+  margin: 0 auto;
+  display: grid;
+  gap: 15px;
+}
+input {
+  padding: 14px;
+  border-radius: 8px;
+  border: none;
+}
+button {
+  padding: 14px;
+  border-radius: 8px;
+  border: none;
+  background: #6366f1;
+  color: #fff;
+  font-weight: 600;
+}
+</style>
