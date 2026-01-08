@@ -4,143 +4,178 @@ export const prerender = true;
 
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Александр Литвин — Private Office</title>
-    <meta name="description" content="Александр Литвин — экстрасенс и парапсихолог. Индивидуальная работа. Private Office." />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Александр Литвин — Private Office</title>
+  <meta name="description" content="Александр Литвин — экстрасенс и парапсихолог. Закрытый формат индивидуальной работы." />
 
-    <style>
-      body {
-        margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-        background: #0f172a;
-        color: #ffffff;
-        line-height: 1.6;
-      }
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: #0f172a;
+      color: #ffffff;
+      line-height: 1.6;
+    }
 
-      header {
-        padding: 80px 20px;
-        text-align: center;
-        background: radial-gradient(circle at top, #1e293b, #020617);
-      }
+    header {
+      padding: 90px 20px;
+      text-align: center;
+      background: radial-gradient(circle at top, #1e293b, #020617);
+    }
 
-      h1 {
-        font-size: 42px;
-        margin-bottom: 20px;
-      }
+    h1 {
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
 
-      p {
-        max-width: 720px;
-        margin: 0 auto 20px;
-        font-size: 18px;
-        color: #cbd5f5;
-      }
+    h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
 
-      .button {
-        display: inline-block;
-        margin-top: 30px;
-        padding: 16px 32px;
-        background: #6366f1;
-        color: #fff;
-        text-decoration: none;
-        border-radius: 8px;
-        font-size: 18px;
-        font-weight: 600;
-        transition: background 0.2s ease;
-      }
+    p {
+      max-width: 800px;
+      margin: 0 auto 20px;
+      font-size: 18px;
+      color: #cbd5f5;
+    }
 
-      .button:hover {
-        background: #4f46e5;
-      }
+    .button {
+      display: inline-block;
+      margin: 15px;
+      padding: 16px 32px;
+      background: #6366f1;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: 600;
+    }
 
-      section {
-        padding: 80px 20px;
-        background: #020617;
-      }
+    .button.secondary {
+      background: #334155;
+    }
 
-      .form-container {
-        max-width: 500px;
-        margin: 0 auto;
-        background: #020617;
-      }
+    section {
+      padding: 80px 20px;
+      background: #020617;
+    }
 
-      form {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-      }
+    .about-box {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #020617;
+      border: 1px solid #1e293b;
+      border-radius: 16px;
+      padding: 40px;
+    }
 
-      input,
-      textarea {
-        padding: 14px;
-        border-radius: 6px;
-        border: none;
-        font-size: 16px;
-      }
+    .about-box p {
+      font-size: 17px;
+    }
 
-      textarea {
-        resize: vertical;
-        min-height: 120px;
-      }
+    .form-container {
+      max-width: 500px;
+      margin: 0 auto;
+    }
 
-      button {
-        padding: 14px;
-        background: #22c55e;
-        border: none;
-        border-radius: 6px;
-        color: #022c22;
-        font-size: 16px;
-        font-weight: 600;
-        cursor: pointer;
-      }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
 
-      button:hover {
-        background: #16a34a;
-      }
+    input, textarea {
+      padding: 14px;
+      border-radius: 6px;
+      border: none;
+      font-size: 16px;
+    }
 
-      footer {
-        text-align: center;
-        padding: 30px;
-        font-size: 14px;
-        color: #94a3b8;
-        background: #020617;
-      }
-    </style>
-  </head>
+    button {
+      padding: 14px;
+      background: #22c55e;
+      border: none;
+      border-radius: 6px;
+      color: #022c22;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+    }
 
-  <body>
-    <header>
-      <h1>Александр Литвин</h1>
-      <p>
-        Экстрасенс и парапсихолог, победитель проекта «Битва экстрасенсов».
-        <br />
-        Private Office — закрытый формат индивидуальной работы
-        с жизненными и стратегическими решениями.
-      </p>
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 14px;
+      color: #94a3b8;
+      background: #020617;
+    }
+  </style>
+</head>
 
-      <a href="#form" class="button">Оставить заявку</a>
-    </header>
+<body>
 
-    <section id="form">
-      <div class="form-container">
-        <h2 style="text-align:center; margin-bottom:20px;">Оставить заявку</h2>
+<header>
+  <h1>Александр Литвин</h1>
+  <p>
+    Экстрасенс и парапсихолог, победитель проекта «Битва экстрасенсов».
+    <br />
+    Private Office — закрытый формат индивидуальной работы.
+  </p>
 
-        <!-- Netlify Form -->
-        <form name="consultation" method="POST" data-netlify="true">
-          <input type="hidden" name="form-name" value="consultation" />
+  <a href="#about" class="button secondary">Подробнее</a>
+  <a href="#form" class="button">Оставить заявку</a>
+</header>
 
-          <input type="text" name="name" placeholder="Ваше имя" required />
-          <input type="email" name="email" placeholder="Email" required />
-          <textarea name="message" placeholder="Кратко опишите ваш вопрос" required></textarea>
+<section id="about">
+  <div class="about-box">
+    <h2>Об Александре Литвине</h2>
 
-          <button type="submit">Отправить</button>
-        </form>
-      </div>
-    </section>
+    <p>
+      Александр Литвин — практикующий экстрасенс и парапсихолог с многолетним
+      опытом индивидуальной работы. Широкой аудитории известен как победитель
+      телевизионного проекта «Битва экстрасенсов».
+    </p>
 
-    <footer>
-      © Александр Литвин · Private Office
-    </footer>
-  </body>
+    <p>
+      Его подход основан не на эзотерике в привычном понимании, а на глубокой
+      аналитике жизненных процессов, работе с вероятностями и стратегическим
+      мышлением.
+    </p>
+
+    <p>
+      <strong>Private Office</strong> — это закрытый формат личной работы,
+      предназначенный для людей, принимающих важные решения: в бизнесе,
+      финансах, карьере и личной жизни.
+    </p>
+
+    <p>
+      Работа ведётся строго индивидуально. Александр не работает с массовыми
+      запросами и не даёт шаблонных рекомендаций.
+    </p>
+  </div>
+</section>
+
+<section id="form">
+  <div class="form-container">
+    <h2>Оставить заявку</h2>
+
+    <form name="consultation" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="consultation" />
+      <input type="text" name="name" placeholder="Ваше имя" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <textarea name="message" placeholder="Опишите ваш запрос" required></textarea>
+      <button type="submit">Отправить</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  © Александр Литвин · Private Office
+</footer>
+
+</body>
 </html>
